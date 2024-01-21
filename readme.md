@@ -24,3 +24,18 @@ goctl -v
 ```text
 goctl version 1.6.2-sxwl darwin/arm64
 ```
+
+## 使用
+与原始goctl使用一样，go子命令增加了一个--service参数，微服务的名字。
+
+示例：3k项目下scheduler服务的api文件更新后，如何重新生成go代码，
+
+```bash
+cd /path/to/the/project/3k
+
+goctl api go --style go_zero \
+  --home ./tools/go-zero-template \
+  --dir . \
+  --api ./cmd/scheduler/scheduler.api \
+  --service scheduler
+```
