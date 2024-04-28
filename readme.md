@@ -7,7 +7,7 @@ Read document at https://go-zero.dev/docs/goctl/goctl
 ## sxwl魔改
 因为sxwl使用monorepo风格管理代码仓库，go微服务的main入口和etc在`/cmd/<service>/`目录下，其他代码在`/internal/<service>/`下。这和gozero生成的目录结构是不兼容的。
 
-这里魔改一下goctl的代码以适应。
+这里魔改一下goctl的代码，支持goctl api的生成符合上述目录结构。
 
 ## 安装
 在项目根目录执行
